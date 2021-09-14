@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  web:
+    build: flask/.
+    ports:
+        - "443:5000"
+    volumes:
+        - /etc/letsencrypt:/etc/letsencrypt
+    depends_on: 
+        - "api"
+  api:
+    build: api/.
+    

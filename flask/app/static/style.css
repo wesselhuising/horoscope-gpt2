@@ -1,0 +1,238 @@
+.page-holder {
+    min-height: 100vh;
+  }
+  
+.bg-cover {
+    background-size: cover !important;
+    background-image: url(images/space.jpg);
+}
+
+
+.content {
+    position: relative;
+    z-index: 5;
+    padding: 50px 50px 15px 50px;
+    background-color: white;
+}
+
+.fortune-icon {
+    width: 150px;
+    text-align: center;
+    fill: purple;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Questrial', sans-serif;
+    font-weight: 800;
+    color: purple;
+    font-size: 3em;
+}
+
+#question {
+    text-align: center;
+}
+
+
+.over-ons {
+    padding-top: 5px;
+}
+
+h2 {
+    color: purple;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 768px) {
+    .medium {
+        padding-left: 30px;
+    }
+
+    h3 {
+        line-height: 56px;
+        font-size: 46px;
+        letter-spacing: -0.011em;
+        font-style: normal;
+        font-weight: 700;
+        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    h3 a {
+        color: rgba(41, 41, 41, 1);
+        text-decoration: none;
+    }
+    
+    h3 a:hover  {
+        color: purple;
+        text-decoration: underline;
+    }
+    
+    h4 {
+        margin-left: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400px;
+        display: inline;
+    }
+    
+    h4 a {
+        color: purple;
+        text-decoration: none;
+    }
+    
+    h4 a:hover {
+        color: purple;
+        text-decoration: underline;
+    }
+    
+    
+    h5 {
+        display: inline;
+        color: rgba(117, 117, 117, 1);
+        line-height: 20px;
+        font-size: 14px;
+        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h2 {
+        padding-top: 30px;
+    }
+    
+    .medium {
+        padding-bottom: 30px;
+    }
+
+    h3 {
+        line-height: 40px;
+        font-size: 32px;
+        letter-spacing: -0.016em;
+        font-style: normal;
+        font-weight: 700;
+        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    h3 a {
+        color: rgba(41, 41, 41, 1);
+        text-decoration: none;
+    }
+    
+    h3 a:hover  {
+        color: purple;
+        text-decoration: underline;
+    }
+    
+    h4 {
+        margin-left: 8px;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400px;
+        display: inline;
+    }
+    
+    h4 a {
+        color: purple;
+        text-decoration: none;
+    }
+    
+    h4 a:hover {
+        color: purple;
+        text-decoration: underline;
+    }
+    
+    
+    h5 {
+        display: inline;
+        color: rgba(117, 117, 117, 1);
+        line-height: 20px;
+        font-size: 14px;
+        font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 400px;
+    }
+}
+
+.wessel {
+    height: 28px;
+    width: 28px; 
+}
+
+p {
+    text-align: justify;
+}
+
+p a {
+    color: purple;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: purple;
+}
+
+.horoscope {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.disclaimer {
+    font-style: italic;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.btn-purple {
+    background-color: purple;
+    border: purple 2px solid;
+}
+
+.btn-purple:hover {
+    border: purple 2px solid;
+    background-color: white;
+    color: purple;
+}
+
+.btn-purple:visited {
+    border: purple 2px solid;
+    background-color: white;
+    color: purple;
+}
+
+.btn-purple:active {
+    border: purple 2px solid;
+    background-color: white;
+    color: purple;
+}
+
+.btn-purple:disabled {
+    background-color: purple;
+    border: purple 2px solid;
+}
+
+.footer {
+    font-style: italic;
+    text-transform: lowercase;
+    font-size: 1em;
+}
+
+.footer a {
+    color: purple;
+    text-decoration: none;
+}
+
+hr {
+    margin-bottom: 30px;
+    border-top: 5px solid purple;
+    /* color: purple; */
+}
+
+.form-control:focus {
+    border-color: purple;
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 128, 0.25);
+} 

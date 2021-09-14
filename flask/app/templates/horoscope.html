@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,900;1,400;1,800&family=Questrial&display=swap" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='images/fortune-teller.svg') }}">
+        <link rel="mask-icon" href="{{ url_for('static', filename='images/fortune-teller.svg') }}" color="purple">
+
+        <title>Horoscoop Generator</title>
+    </head>
+    <body>
+        <div class="page-holder bg-cover d-flex justify-content-center align-items-center">
+            <div class="container content rounded-3">
+                <div class="row justify-content-center pb-3">
+                    <svg class="fortune-icon" viewBox="-26 0 512 512" width="512pt" xmlns="http://www.w3.org/2000/svg"><path d="m452.265625 512h-443.730469c-4.710937 0-8.535156-3.8125-8.535156-8.535156v-34.132813c0-4.71875 3.824219-8.53125 8.535156-8.53125h443.730469c4.710937 0 8.535156 3.8125 8.535156 8.53125v34.132813c0 4.722656-3.824219 8.535156-8.535156 8.535156zm-435.199219-17.066406h426.667969v-17.066406h-426.667969zm0 0"/><path d="m418.132812 477.867188h-375.464843c-4.710938 0-8.535157-3.816407-8.535157-8.535157v-16.972656c0-14.164063 11.527344-25.691406 25.695313-25.691406h341.230469c14.113281 0 25.609375 11.492187 25.609375 25.617187v17.046875c0 4.71875-3.824219 8.535157-8.535157 8.535157zm-366.933593-17.066407h358.402343v-8.515625c0-4.71875-3.832031-8.550781-8.550781-8.550781h-341.222656c-4.761719 0-8.628906 3.863281-8.628906 8.625zm0 0"/><path d="m375.464844 443.734375h-290.132813c-4.710937 0-8.53125-3.816406-8.53125-8.535156v-34.132813c0-4.71875 3.820313-8.53125 8.53125-8.53125h290.132813c4.710937 0 8.535156 3.8125 8.535156 8.53125v34.132813c0 4.71875-3.824219 8.535156-8.535156 8.535156zm-281.597656-17.066406h273.066406v-17.066407h-273.066406zm0 0"/><path d="m136.542969 93.867188c-2.699219 0-5.351563-1.273438-7.015625-3.660157-2.695313-3.867187-1.742188-9.183593 2.125-11.878906 25.933594-18.066406 59.1875-26.90625 98.757812-27.128906 4.71875.007812 8.53125 3.832031 8.523438 8.550781-.007813 4.710938-3.824219 8.515625-8.535156 8.515625-.109376 0-.246094 0-.375 0-35.871094 0-65.6875 8.097656-88.617188 24.066406-1.484375 1.03125-3.183594 1.535157-4.863281 1.535157zm0 0"/><path d="m68.265625 230.398438c-4.710937 0-8.53125-3.8125-8.53125-8.53125-.007813-34.558594 8.335937-62.355469 27.058594-90.113282 2.636719-3.90625 7.9375-4.921875 11.84375-2.304687 3.910156 2.636719 4.941406 7.945312 2.304687 11.855469-16.707031 24.761718-24.148437 49.613281-24.140625 80.5625 0 4.710937-3.824219 8.53125-8.535156 8.53125zm0 0"/><path d="m341.332031 208.332031-37.664062-37.664062 37.664062-37.667969 37.667969 37.667969zm-13.53125-37.664062 13.53125 13.53125 13.535157-13.53125-13.535157-13.535157zm0 0"/><path d="m341.332031 153.601562c-4.710937 0-8.53125-3.816406-8.53125-8.535156v-17.066406c0-4.71875 3.820313-8.535156 8.53125-8.535156 4.710938 0 8.535157 3.816406 8.535157 8.535156v17.066406c0 4.71875-3.824219 8.535156-8.535157 8.535156zm0 0"/><path d="m384 179.199219h-17.066406c-4.710938 0-8.535156-3.8125-8.535156-8.53125s3.824218-8.535157 8.535156-8.535157h17.066406c4.710938 0 8.535156 3.816407 8.535156 8.535157s-3.824218 8.53125-8.535156 8.53125zm0 0"/><path d="m341.332031 221.867188c-4.710937 0-8.53125-3.816407-8.53125-8.535157v-17.066406c0-4.71875 3.820313-8.53125 8.53125-8.53125 4.710938 0 8.535157 3.8125 8.535157 8.53125v17.066406c0 4.71875-3.824219 8.535157-8.535157 8.535157zm0 0"/><path d="m315.734375 179.199219h-17.066406c-4.710938 0-8.535157-3.8125-8.535157-8.53125s3.824219-8.535157 8.535157-8.535157h17.066406c4.710937 0 8.53125 3.816407 8.53125 8.535157s-3.820313 8.53125-8.53125 8.53125zm0 0"/><path d="m230.398438 344.867188-37.664063-37.667969 37.664063-37.664063 37.667968 37.664063zm-13.53125-37.667969 13.53125 13.535156 13.535156-13.535156-13.535156-13.53125zm0 0"/><path d="m230.398438 290.132812c-4.707032 0-8.53125-3.8125-8.53125-8.53125v-17.066406c0-4.722656 3.824218-8.535156 8.53125-8.535156 4.710937 0 8.535156 3.8125 8.535156 8.535156v17.066406c0 4.71875-3.824219 8.53125-8.535156 8.53125zm0 0"/><path d="m273.066406 315.734375h-17.066406c-4.710938 0-8.535156-3.816406-8.535156-8.535156s3.824218-8.53125 8.535156-8.53125h17.066406c4.710938 0 8.535156 3.8125 8.535156 8.53125s-3.824218 8.535156-8.535156 8.535156zm0 0"/><path d="m230.398438 358.398438c-4.707032 0-8.53125-3.8125-8.53125-8.53125v-17.066407c0-4.71875 3.824218-8.535156 8.53125-8.535156 4.710937 0 8.535156 3.816406 8.535156 8.535156v17.066407c0 4.71875-3.824219 8.53125-8.535156 8.53125zm0 0"/><path d="m204.800781 315.734375h-17.066406c-4.710937 0-8.535156-3.816406-8.535156-8.535156s3.824219-8.53125 8.535156-8.53125h17.066406c4.710938 0 8.53125 3.8125 8.53125 8.53125s-3.820312 8.535156-8.53125 8.535156zm0 0"/><path d="m346.085938 409.601562h-231.371094c-1.648438 0-3.253906-.480468-4.636719-1.367187-63.589844-41.128906-101.542969-110.8125-101.542969-186.367187 0-122.34375 99.53125-221.867188 221.863282-221.867188 122.335937 0 221.867187 99.523438 221.867187 221.867188 0 75.554687-37.957031 145.238281-101.546875 186.367187-1.382812.886719-2.984375 1.367187-4.632812 1.367187zm-228.828126-17.066406h226.277344c57.445313-38.144531 91.664063-101.753906 91.664063-170.667968 0-112.921876-91.867188-204.800782-204.800781-204.800782-112.929688 0-204.796876 91.878906-204.796876 204.800782 0 68.914062 34.21875 132.523437 91.65625 170.667968zm0 0"/></svg>
+                </div>
+
+                <div class="row">                    
+                    <h1>{{ question }}</h1>
+                </div>
+
+                <p class="horoscope">
+                    {{ horoscope }}
+                </p>
+                
+                <p class="disclaimer">
+                    Deze tekst is gegenereerd door een computer en ik heb persoonlijk niks te maken met eventuele uitkomsten.
+                </p>
+
+                <hr class="border-3">
+                
+                <div class="row over-ons pt-3">
+                    <div class="col-md-6">
+                        <h2 class="text-center">Wat is dit en hoe werkt dit</h2>
+                        <p>
+                            <p>U wilt toch ook weten wat de dag gaat brengen? Gelukkig kan de computer tegenwoordig alles voorspellen en vanaf nu ook uw daghoroscoop door middel van een GPT-2 model. Dit model is getraind op 10.000 unieke Nederlands geschreven horoscopen en is gemaakt om op basis van een beetje input een horoscoop te genereren. Alle uitkomsten zijn daarom niet door mij bedacht maar door het model dat gehost wordt op een server van TransIP. Ik heb een artikel met uitleg en code over de werking van dit model geschreven wat <a href="https://wesselhuising.medium.com/creating-a-horoscope-generator-in-dutch-using-deep-learning-45d6ff11f269">hier</a> te vinden is.</p>
+                            <p>Deze tool demonstreert de werking van het GPT-2 model, beschreven in het artikel, dat is gemaakt voor het genereren van horoscopen in het Nederlands.</p> 
+                    </div>
+                    <div class="col-md-6 d-flex medium justify-content-center align-items-center">
+                        <div>
+                            <h3><a href="https://wesselhuising.medium.com/creating-a-horoscope-generator-in-dutch-using-deep-learning-45d6ff11f269">Creating a Horoscope Generator in Dutch using Deep Learning</a></h3>
+                            <div style="display: inline;">
+                                <img class="wessel rounded-circle" alt="this nerd" src="{{ url_for('static', filename='images/wessel.jpeg') }}">
+                                <h4><a href="https://wesselhuising.medium.com/">Wessel Huising</a></h4>
+                                <h5>16 min read</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row footer">
+                    <p class="text-center">gemaakt door <a href="https://wesselhuising.nl">wessel huising</a>. code te vinden op <a href="https://github.com/wesselhuising">github</a>.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script>
+            $("#question").on("change", function() {
+                console.log('hai');
+                if ($("#question").val() === "") {
+                    $("#generate-button").prop("disabled", true);
+                    console.log('hai');
+                } else {
+                    $("#generate-button").prop("disabled", false);
+                }
+            })
+
+            function loading() {
+                $("#generate-button").hide();
+                $("#loading-button").show();
+            }
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1B98QW4DLY"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1B98QW4DLY');
+        </script>
+    </body>
+</html>
